@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { SwUpdate } from '@angular/service-worker';
 
 
 @Component({
@@ -49,7 +50,13 @@ export class ExerciseTwoComponent implements OnInit {
     }
   };
 
-  constructor(private apiService: ApiService) { }
+  constructor(updates: SwUpdate, private apiService: ApiService) {
+    updates.available.subscribe(event => {
+
+      updates.activateUpdate().then(() => document.location.reload());
+
+    })
+  }
 
   ngOnInit() {
     this.apiService.getRandomNumber()
