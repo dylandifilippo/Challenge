@@ -1,0 +1,52 @@
+.body-exe-one {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f3efdf;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.neumorphism {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #f3efdf;
+  box-shadow:  20px 20px 60px #cfcbbe,
+             -20px -20px 60px #ffffff;
+  height: 200px;
+}
+
+.joke{
+  padding: 200px 200px;
+}
+
+button {
+  margin-top: 50px;
+  height: 60px;
+  width: 200px;
+  font-size: 16px;
+  color: #f3efdf;
+  background-color: #001f3f;
+  border-radius: 30px;
+}
+
+img {
+  width: 550px;
+  border-radius: 109px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,1 +1,14 @@
-<p>exercise-one works!</p>
+<div class="body-exe-one">
+  <div class=container>
+    <img src="../../assets/chuck_norris.jpg" alt="">
+    <div class="neumorphism" *ngFor='let joke of jokes'>
+      <div class="joke">
+        <h2>{{joke.value}}</h2>
+      </div>
+    </div>
+    <div class='btn'>
+      <button (click)="refresh()">NEW JOKE</button>
+      <button routerLink="puzzle">PUZZLE PAGE</button>
+    </div>
+  </div>
+</div>

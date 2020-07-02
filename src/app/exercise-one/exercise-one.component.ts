@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { Joke } from '../chuck.model';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-exercise-one',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise-one.component.css']
 })
 export class ExerciseOneComponent implements OnInit {
+  jokes: any[] = [];
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getJoke()
+      .subscribe(data => this.jokes.push(data));
+  }
+
+  refresh() {
+    window.location.reload();
   }
 
 }

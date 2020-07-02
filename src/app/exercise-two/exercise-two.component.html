@@ -1,1 +1,23 @@
-<p>exercise-two works!</p>
+<div class="body">
+  <div class="container">
+    <div class="neumorphism">
+      <h1>Guess the number between 1 to 50.000</h1>
+      <h2>The secret number was: {{secretNumber}}</h2>
+      <h2>It took {{counter}} tries</h2>
+      <!-- <div *ngIf="counter < 20 && counter >=1 ">
+        <h2>Yaaaaay the CPU did it!</h2>
+        <h2>The secret number was: {{secretNumber}}</h2>
+        <h2>It took {{counter}} tries</h2>
+      </div>
+      <div *ngIf="counter > 20">
+        <h2>Too bad, the CPU didn't succeed</h2>
+        <h2>The secret number was: {{secretNumber}}</h2>
+        <h2>It took {{counter}} tries</h2>
+      </div> -->
+    </div>
+    <div class="btn">
+      <button (click)="newGame()">GUESS</button>
+      <button routerLink="/">Chuck Norris</button>
+    </div>
+  </div>
+</div>
